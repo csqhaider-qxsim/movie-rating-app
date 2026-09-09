@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #14151a;
+  --bg-alt: #1b1d24;
+  --card: #1e2027;
+  --gold: #e8b34c;
+  --velvet: #a34b4b;
+  --cream: #f2efe9;
+  --muted: #8a8d99;
+  --line: #2c2f39;
+}
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  margin: 0;
+}
+
+.rp-serif { font-family: 'Fraunces', serif; }
+.rp-sans { font-family: 'Inter', sans-serif; }
+
+.rp-stub {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.rp-stub:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+.rp-perf {
+  position: relative;
+  border-top: 1px dashed var(--line);
+}
+.rp-perf::before, .rp-perf::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  background: var(--bg);
+  border-radius: 50%;
+}
+.rp-perf::before { left: -7px; }
+.rp-perf::after { right: -7px; }
+
+.rp-focus:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.rp-scrollbar::-webkit-scrollbar { width: 8px; }
+.rp-scrollbar::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rp-stub { transition: none; }
+}
