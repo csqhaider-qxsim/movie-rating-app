@@ -18,5 +18,5 @@ Reel features a fully integrated **live data layer powered by the TMDB API**. Th
 
 ### 🛠️ Tech Stack
 * **Frontend:** React, Vite, JavaScript (ES6+)
-* **Styling:** CSS3 / Tailwind CSS (or whichever styling you used)
+* **Styling:** CSS3 / Tailwind CSS 
 * **API Integration:** The Movie Database (TMDB) API
